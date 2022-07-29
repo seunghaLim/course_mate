@@ -3,9 +3,21 @@ const app = express();
 import connectDB from "./loaders/db";
 import routes from './routes';
 require('dotenv').config();
+const cors = require("cors");
 
 connectDB();
 
+const corsOrigin = [
+  "http://localhost:8000",
+  "http://localhost:3000"
+];
+
+app.use(
+  cors({
+    origin: corsOrigin,
+    credentials: true,
+  })
+);
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
