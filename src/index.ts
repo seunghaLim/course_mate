@@ -10,6 +10,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.use(routes);   //라우터 
+
 // error handler
 
 interface ErrorType {
@@ -24,7 +25,7 @@ app.use(function (err: ErrorType, req: Request, res: Response, next: NextFunctio
 
   // render the error page
   res.status(err.status || 500);
-  res.render("error");
+  res.json({ "error in index": err });
 });
 
 app

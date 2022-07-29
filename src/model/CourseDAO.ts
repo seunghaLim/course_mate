@@ -17,6 +17,10 @@ const CourseSchema = new mongoose.Schema({
   professor: {
     type: String,
     required: true
+  },
+  classification: {
+    type: String,
+    required: true
   }
 });
 

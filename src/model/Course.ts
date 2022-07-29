@@ -3,4 +3,5 @@ export interface Course {
   department: string;
   name: string;
   professor: string;
+  classification: string;
 }
