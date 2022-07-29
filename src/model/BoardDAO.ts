@@ -16,11 +16,13 @@ const BoardSchema = new mongoose.Schema({
   },
   writer: {
     type: mongoose.Schema.Types.ObjectId,
-    required: true 
+    required: true,
+    ref: "User"
   },
   course: {
     type: mongoose.Schema.Types.ObjectId,
-    required: true 
+    required: true,
+    ref: "Course"
   },
   createdAt: {
     type: String,

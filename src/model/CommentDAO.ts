@@ -8,11 +8,13 @@ const CommentSchema = new mongoose.Schema({
   },
   writer: {
     type: mongoose.Schema.Types.ObjectId,
-    required: true
+    required: true,
+    ref: "User"
   },
   board: {
     type: mongoose.Schema.Types.ObjectId,
-    required: true
+    required: true,
+    ref: "Board"
   }, 
   createdAt: {
     type: String,

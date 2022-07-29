@@ -4,7 +4,7 @@ import CourseRouter from "./CourseRouter";
 
 const router = Router();
 
-router.use("/", BoardRouter);
+router.use("/board", BoardRouter);
 router.use("/courses", CourseRouter);
 
 export default router;

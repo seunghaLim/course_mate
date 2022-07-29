@@ -18,7 +18,7 @@ const CourseSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  classification: {
+  school: {
     type: String,
     required: true
   }
